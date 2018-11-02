@@ -13,6 +13,7 @@ namespace HelloWorld
             Console.WriteLine("Helo World");
             Console.WriteLine("Dodao promjenu u VS");
             Console.WriteLine("Dodao promjenu u GitHub");
+            Console.WriteLine("Dodao promjenu u VS u MZO Branch");
             Console.ReadLine();
 
         }

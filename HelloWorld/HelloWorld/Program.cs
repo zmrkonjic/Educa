@@ -11,9 +11,9 @@ namespace HelloWorld
         static void Main(string[] args)
         {
             Console.WriteLine("Helo World");
+            Console.WriteLine("Dodao promjenu u VS");
             Console.ReadLine();
-            Consloe.WritLine("Dodao promjenu a GitHubu");
-            Console.ReadLine();
+
         }
     }
 }

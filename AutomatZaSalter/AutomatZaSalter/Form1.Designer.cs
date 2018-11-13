@@ -130,6 +130,7 @@
             this.btnPrintListic.TabIndex = 9;
             this.btnPrintListic.Text = "Printaj listić";
             this.btnPrintListic.UseVisualStyleBackColor = true;
+            this.btnPrintListic.Click += new System.EventHandler(this.btnPrintListic_Click);
             // 
             // lblSalter1
             // 

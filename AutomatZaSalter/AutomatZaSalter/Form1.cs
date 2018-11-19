@@ -10,6 +10,13 @@ using System.Windows.Forms;
 
 namespace AutomatZaSalter
 {
+    public static class Session
+    {
+        public static int zadnjiBrojListica;
+        public static int listicQueue;
+    }
+
+
     public partial class Form1 : Form
     {
         public Form1()
@@ -17,27 +24,40 @@ namespace AutomatZaSalter
             InitializeComponent();
         }
 
-    protected void Ucitavanje_Stranice(object sender, EventArgs e)
+    protected void Ucitavanje_Stranice(int listicQueue)
         {
-            if (Session["TokenQueue"] == null)
+            if (listicQueue == null)
             {
             Queue<int> queueListic = new Queue<int>();
-            Session["TokenQueue"] = queueListic;
+            listicQueue = queueListic;
             }
         }
 
 
-        private void btnPrintListic_Click(object sender, EventArgs e)
+        private void btnPrintListic_Click(object sender, EventArgs e, int listicQueue, int zadnjiBrojListica)
         {
-            Queue<int> listicQueue = (Queue<int>)Session["TokenQueue"];
-            lblInfo.Text = "Ispred vas je" + listicQueue.Count.ToString() + "na čekanju";
+            Queue<int> lq = (Queue<int>)listicQueue;
+            lblInfo.Text = "Ispred vas je" + lq.Count.ToString() + "na čekanju";
 
-            if (Session["ZadnjiBrojListica"] == null)
+            if (zadnjiBrojListica == null)
             {
-                Session["ZadnjiBrojListica"] = 0;
+                zadnjiBrojListica = 0;
             }
 
-            int sljedeciBrojListicaIzdan = (int)Session["ZadnjiBrojListica"] + 1;
+            var sljedeciBrojListicaIzdan = zadnjiBrojListica + 1;
+            zadnjiBrojListica = sljedeciBrojListicaIzdan;
+            lq.Enqueue(sljedeciBrojListicaIzdan);
         }
+            DodajListicuListBox(lq);
+
+            private void DodajListicuListBox(Queue<int> lq)
+            {
+                listTokens.Items.Clear();
+                foreach (int token in lq)
+                {
+                    listTokens.Items.Add(token.ToString());
+                }
+            }
+        
     }
 }

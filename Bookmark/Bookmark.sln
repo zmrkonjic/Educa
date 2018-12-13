@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2046
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bookmark", "Bookmark\Bookmark.csproj", "{557E7E68-1B32-4C55-9E38-4350BCCE76BF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bookmark.Manager", "Bookmark.Manager\Bookmark.Manager.csproj", "{A16F2EB8-DEEB-4DDB-A128-B36E346AA802}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{557E7E68-1B32-4C55-9E38-4350BCCE76BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{557E7E68-1B32-4C55-9E38-4350BCCE76BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{557E7E68-1B32-4C55-9E38-4350BCCE76BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{557E7E68-1B32-4C55-9E38-4350BCCE76BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A16F2EB8-DEEB-4DDB-A128-B36E346AA802}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A16F2EB8-DEEB-4DDB-A128-B36E346AA802}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A16F2EB8-DEEB-4DDB-A128-B36E346AA802}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A16F2EB8-DEEB-4DDB-A128-B36E346AA802}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {62BBD0C8-18AB-4109-B363-46F0C04196C5}
+	EndGlobalSection
+EndGlobal
